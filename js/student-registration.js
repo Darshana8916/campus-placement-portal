@@ -39,6 +39,31 @@ function validateStep1() {
     return ok;
   }
 
+ function validateStep3() {
+    let ok = true;
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value);
+    document.getElementById('email').classList.toggle('error', !emailOk);
+    document.getElementById('err-email').classList.toggle('show', !emailOk);
+    if (!emailOk) ok = false;
+
+    const pass = document.getElementById('password').value;
+    const passOk = pass.length >= 8;
+    document.getElementById('password').classList.toggle('error', !passOk);
+    document.getElementById('err-password').classList.toggle('show', !passOk);
+    if (!passOk) ok = false;
+
+    const conf = document.getElementById('confirmPass').value;
+    const confOk = conf === pass && conf.length > 0;
+    document.getElementById('confirmPass').classList.toggle('error', !confOk);
+    document.getElementById('err-confirmPass').classList.toggle('show', !confOk);
+    if (!confOk) ok = false;
+
+    const terms = document.getElementById('terms').checked;
+    document.getElementById('err-terms').classList.toggle('show', !terms);
+    if (!terms) ok = false;
+    return ok;
+  }
+
 function nextStep(from) {
     const valid = from === 1 ? validateStep1() : from === 2 ? validateStep2() : true;
     if (!valid) return;
