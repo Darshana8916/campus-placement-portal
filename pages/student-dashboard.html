@@ -9,9 +9,7 @@
 <link rel="stylesheet" href="../js/student-dashboard.js"/>
 </head>
 <body>
-    <main class="main">
-
-  <!-- Topbar -->
+    <main class="main">git
   <div class="topbar">
     <div class="greeting">
       <h1 id="greetingName">Welcome 👋</h1>
@@ -22,8 +20,6 @@
       <div class="icon-btn">🔔<span class="notif-dot"></span></div>
     </div>
   </div>
-
-  <!-- Stat Cards -->
   <div class="stats-row">
     <div class="stat-card">
       <div class="stat-icon-wrap" style="background:var(--blue-s)">💼</div>
@@ -63,7 +59,6 @@
         </div>
       </div>
     </div>
-    <!-- Profile Card -->
     <div class="profile-card">
       <div class="p-avatar" id="profileAvatar">?</div>
       <div class="p-name" id="profileName">Your Name</div>
@@ -93,5 +88,48 @@
       <div class="pc-bar" style="width:100%"><div class="pc-fill" id="pcFill" style="width:0%"></div></div>
     </div>
   </div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">Upcoming Drives</div>
+        <span class="card-link">Calendar →</span>
+      </div>
+      <div class="drive-item">
+        <div class="d-date" style="background:var(--blue-s)">
+          <div class="d-day" style="color:var(--blue)">06</div>
+          <div class="d-mon" style="color:var(--blue)">Mar</div>
+        </div>
+        <div class="d-info">
+          <div class="d-title">TCS NQT Drive</div>
+          <div class="d-meta">Aptitude + Technical</div>
+          <div class="d-time">⏰ 10:00 AM · Room 401</div>
+        </div>
+        <button class="reg-btn done">✓ Done</button>
+      </div>
+      <div class="drive-item">
+        <div class="d-date" style="background:var(--violet-s)">
+          <div class="d-day" style="color:var(--violet)">09</div>
+          <div class="d-mon" style="color:var(--violet)">Mar</div>
+        </div>
+        <div class="d-info">
+          <div class="d-title">Infosys InfyTQ</div>
+          <div class="d-meta">Technical + HR</div>
+          <div class="d-time">⏰ 9:00 AM · Online</div>
+        </div>
+        <button class="reg-btn" onclick="this.classList.add('done');this.textContent='✓ Done';toast('Registered for Infosys InfyTQ!')">Register</button>
+      </div>
+      <div class="drive-item">
+        <div class="d-date" style="background:var(--teal-s)">
+          <div class="d-day" style="color:var(--teal)">14</div>
+          <div class="d-mon" style="color:var(--teal)">Mar</div>
+        </div>
+        <div class="d-info">
+          <div class="d-title">Amazon SDE Hiring</div>
+          <div class="d-meta">DSA + System Design</div>
+          <div class="d-time">⏰ 11:00 AM · Hall B</div>
+        </div>
+        <button class="reg-btn" onclick="this.classList.add('done');this.textContent='✓ Done';toast('Registered for Amazon SDE!')">Register</button>
+      </div>
+    </div>
 </body>
 </html>
