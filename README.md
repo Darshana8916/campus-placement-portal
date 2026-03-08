@@ -134,8 +134,7 @@ The main objective of this project is to **simplify the placement process** and 
   <img src="https://contrib.rocks/image?repo=anjalimhase24/campus-placement-portal" />
 </a>
 
-For any queries related to the project, feel free to contact.
-
+Made with [contrib.rocks](https://contrib.rocks).
 ---
 
 
